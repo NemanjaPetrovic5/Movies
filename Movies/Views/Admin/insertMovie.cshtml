@@ -1,0 +1,50 @@
+﻿@model Movies.Models.Movie
+
+@{
+    ViewData["Title"] = "insertMovie";
+}
+
+<h1>insertMovie</h1>
+
+<h4>Movie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="insertMovie">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="movieID" class="control-label"></label>
+                <input asp-for="movieID" class="form-control" />
+                <span asp-validation-for="movieID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="content" class="control-label"></label>
+                <input asp-for="content" class="form-control" />
+                <span asp-validation-for="content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="image" class="control-label"></label>
+                <input asp-for="image" class="form-control" />
+                <span asp-validation-for="image" class="text-danger"></span>
+                @*<input placeholder="Image" asp-for="image" class="img-upload">
+                    <span asp-validation-for="image" class="text-danger"></span>*@
+            </div>
+            <div class="form-group">
+                <input type="submit" value="insertMovie" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Movies">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
