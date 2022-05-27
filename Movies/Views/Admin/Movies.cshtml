@@ -6,7 +6,6 @@
 }
 @section skripte{
     <link rel="stylesheet" href="~/css/movies.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 }
 
 <h1>Movies</h1>
@@ -16,25 +15,28 @@
 </p>
 <table class="table">
     <tr>
+        <th>Image</th>
         <th>Movie name</th>
         <th>content</th>
-        <th>Image</th>
         <th>Options</th>
 
     </tr>
     <tbody>
         @foreach (var item in Model.movie)
         {
-            <tr>
-                <td><input type="text" placeholder="Username" value="@item.movie.name"></td>
-                <td><input type="text" placeholder="Password" value="@item.movie.content"></td>
-                <td><input type="email" placeholder="Email" value="@item.movie.image"></td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { @*id=item.movie.PrimaryKey*@}) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>
-            </tr>
+        <tr>
+            <td>
+                <img class="movie-img" src="~/images/Movies/@item.movie.image">
+            </td>
+            <td>@item.movie.name</td>
+            <td>@item.movie.content</td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { @*id=item.movie.PrimaryKey*@}) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
         }
     </tbody>
 </table>

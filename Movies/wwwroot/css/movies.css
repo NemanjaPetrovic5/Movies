@@ -1,0 +1,132 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.movie-title {
+    font-size: 1.3em;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.movie-about {
+    color: #fff;
+    padding: 1em 0;
+}
+
+.movies-wrap {
+    position: relative;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    text-align: left;
+}
+
+    .movies-wrap .crs {
+        position: relative;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 40px 20px;
+    }
+
+        .movies-wrap .crs h2 {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+.movies-list {
+    min-height: 700px;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-gap: 20px;
+    margin-top: 50px;
+}
+
+    .movies-grid .movie {
+        position: relative;
+        height: 350px;
+        background: #1a1a1f;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+.movie .movie-thumb {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+    .movie .movie-thumb img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        min-height: 100%;
+        transition: 0.5s ease all;
+    }
+
+
+.movie:hover .movie-thumb img {
+    width: 110%;
+}
+
+.movie .movie-desc {
+    padding: 20px;
+}
+
+    .movie .movie-desc .movie-title {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .movie .movie-desc p {
+        font-size: 14px;
+    }
+
+.movie a {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pages {
+    width: 100%;
+    text-align: center;
+}
+
+    .pages .num {
+        display: inline-block;
+        width: 30px;
+        line-height: 30px;
+        background: #1E2021;
+        color: #a7a7a7;
+        border-radius: 4px;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .pages .active {
+        background: #34393B;
+        color: #d3d3d3;
+    }
+
+.totalMovies {
+    color: #c3c3c3;
+    font-size: 16px;
+}
+.movie-img {
+    width: 80px;
+    height: 110px;
+}

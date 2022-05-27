@@ -1,0 +1,28 @@
+﻿@model Movie
+
+@{ ViewData["Title"] = "MovieDetails"; }
+
+
+@section skripte{
+    <link rel="stylesheet" href="~/css/movie.css">
+}
+
+<h1>@Model.name</h1>
+<div>
+    <div class="course-img">
+        <img src="~/images/Movies/@Model.image" alt="">
+
+    </div>
+
+    <div class="about-course">
+        <table>
+
+            <tr>
+                <th>Description</th>
+                <td>@Model.content</td>
+
+
+        </table>
+        <a class="course-link" href="" target="_blank">Visit movie</a>
+    </div>
+</div>

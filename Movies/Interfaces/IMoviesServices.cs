@@ -10,6 +10,8 @@ namespace Movies.Interfaces
     {
         Movie Insert(Movie movie);
         List<Movie> Read();
+        (List<Movie>, int) GetMovies(int page, int pageSize);
 
+        Movie Find(string id);
     }
 }

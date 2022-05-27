@@ -1,0 +1,42 @@
+﻿@model Movies.ViewModels.Admin.AdminMoviesViewModel
+@{
+    ViewData["Title"] = "Movies";
+    int maxPages = ViewBag.maxPages;
+    int page = ViewBag.page;
+}
+
+<h1>Movies</h1>
+@section skripte{
+    <link rel="stylesheet" href="~/css/movies.css">
+}
+<div class="movies-wrap">
+    <div class="movies-list-wrap">
+        <div class="movies-list crs">
+            <h2>Movies <span class="totalMovies">(@ViewBag.total)</span></h2>
+            <div class="movies-grid">
+                @foreach (var item in Model.movie)
+                {
+                    <div class="movie">
+                        <div class="movie-thumb">
+
+                            <img src="~/images/Movies/@item.movie.image">
+
+                        </div>
+                        <div class="movie-desc">
+                            <h3 class="movie-title">@item.movie.name </h3>
+                            <p class="movie-about">@item.movie.content</p>
+                        </div>
+                        <a asp-controller="Movie" asp-action="MovieDetails" asp-route-id="@item.movie.movieID"></a>
+                    </div>}
+            </div>
+            <div class="pages">
+                @for (int i = 1; i <= maxPages; i++)
+                {
+                    <a class="num @(i == page ? "active" : "")"
+                       asp-action="Movies"
+                       asp-route-page="@i">@i</a>}
+            </div>
+        </div>
+    </div>
+</div>
+

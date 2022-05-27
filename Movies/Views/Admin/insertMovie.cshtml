@@ -1,22 +1,18 @@
-﻿@model Movies.Models.Movie
+﻿@model Movies.ViewModels.Admin.MoviesViewModel
 
 @{
     ViewData["Title"] = "insertMovie";
 }
 
-<h1>insertMovie</h1>
+<h1>Insert Movie</h1>
 
 <h4>Movie</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="insertMovie">
+        <form asp-action="insertMovie" asp-controller="Admin" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="movieID" class="control-label"></label>
-                <input asp-for="movieID" class="form-control" />
-                <span asp-validation-for="movieID" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <label asp-for="name" class="control-label"></label>
                 <input asp-for="name" class="form-control" />
@@ -31,14 +27,13 @@
                 <label asp-for="image" class="control-label"></label>
                 <input asp-for="image" class="form-control" />
                 <span asp-validation-for="image" class="text-danger"></span>
-                @*<input placeholder="Image" asp-for="image" class="img-upload">
-                    <span asp-validation-for="image" class="text-danger"></span>*@
             </div>
+
             <div class="form-group">
                 <input type="submit" value="insertMovie" class="btn btn-primary" />
             </div>
         </form>
-    </div>
+</div>
 </div>
 
 <div>

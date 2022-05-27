@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 using Movies.Interfaces;
 using Movies.Models;
 using System;
@@ -32,5 +33,23 @@ namespace Movies.Services
             var m = movies.Find(m => true);
             return m.ToList();
         }
+        // GET MOVIES
+        public (List<Movie>, int) GetMovies(int page, int pageSize)
+        {
+            var builder = Builders<Movie>.Filter;
+
+            var filter = builder.Empty;
+
+            int skip = pageSize * (page - 1);
+            var count = movies.CountDocuments(filter);
+            var k = movies.Find(filter).SortBy(k => k.movieID).Skip(skip).Limit(pageSize);
+
+
+            return (k.ToList(), (int)count);
+        }
+        //FIND
+        public Movie Find(string id) =>
+          movies.Find(sub => sub.movieID == id).SingleOrDefault();
     }
 }
+

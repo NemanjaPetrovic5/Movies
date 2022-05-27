@@ -100,7 +100,6 @@ C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Movies.TagHelpers.output
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Movies.RazorCoreGenerate.cache
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
@@ -188,3 +187,5 @@ C:\CSharpProjekti\Movies\Movies\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAn
 C:\CSharpProjekti\Movies\Movies\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Admin\insertMovie.cshtml.g.cs
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Movies.cshtml.g.cs
+C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Movies.cshtml.g.cs
+C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Movie\MovieDetails.cshtml.g.cs

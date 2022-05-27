@@ -63,7 +63,7 @@ namespace Movies.Controllers
             return View();
         }
 
-        // POST: AdminController/Create
+        // POST: AdminController/insertMovie
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult insertMovie(MoviesViewModel m)
@@ -76,14 +76,15 @@ namespace Movies.Controllers
                     {
                         name = m.name,
                         content = m.content,
-                        image = "no.image.jpg"
+                        image = "no-image.jpg"
 
                     };
                     var file = m.image;
+
                     if (file != null)
                     {
-                        movie.image = movie.movieID + "-Original-" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".png";
-                        var filePath = Directory.GetCurrentDirectory() + "/wwwroot/images/Kursevi";
+                        movie.image = movie.name + "-Original-" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + ".png";
+                        var filePath = Directory.GetCurrentDirectory() + "/wwwroot/images/Movies";
                         if (Directory.Exists(filePath))
                         {
                             Directory.CreateDirectory(filePath);
