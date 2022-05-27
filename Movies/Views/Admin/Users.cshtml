@@ -1,0 +1,42 @@
+﻿@model Movies.ViewModels.Admin.AdminUsersViewModel
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h1>Users</h1>
+@section skripte{
+    <link rel="stylesheet" href="~/css/movies.css">
+}
+
+<p>
+    <a asp-action="insertUser">Create New User</a>
+</p>
+<table class="table">
+    <tr>
+        <th>Username</th>
+        <th>email</th>
+        <th>Type</th>
+        <th>Options</th>
+
+    </tr>
+    <tbody>
+        @foreach (var item in Model.users)
+        {
+        <tr>
+            <td><input type="text" placeholder="Username" value="@item.user.username"></td>
+            <td><input type="email" placeholder="Email" value="@item.user.email"></td>
+            @if (@item.user.type == 1)
+            {
+                <td><input type="text" placeholder="User" value="User"></td>  }
+            else {
+                <td><input type="text" placeholder="Admin" value="Admin"></td> }
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { @*id=item.movie.PrimaryKey*@}) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

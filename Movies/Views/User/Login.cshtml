@@ -1,0 +1,25 @@
+﻿@model Movies.ViewModels.UserLoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="reg-wrap">
+    <div class="login-wrap">
+        <div class="login">
+            <h1>Login</h1>
+            <div asp-validation-summary="ModelOnly" class="error"></div>
+            <form asp-controller="User" asp-action="Login" method="post">
+                <label>Username</label>
+                <input asp-for="username" />
+                <span asp-validation-for="username"></span>
+                <label>Password</label>
+                <input asp-for="password" />
+                <span asp-validation-for="password"></span>
+                <label><input asp-for="remember"> Remember me</label>
+                <input class="signInBtn" type="submit" value="Sign In" />
+            </form>
+            <a asp-controller="User" asp-action="Register">Don't have an account?</a>
+        </div>
+    </div>
+</div>
+

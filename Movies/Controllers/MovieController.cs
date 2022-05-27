@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Movies.Interfaces;
 using Movies.Models;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Movies.Controllers
 {
+    [Authorize]
     public class MovieController : Controller
     {
         // instanciranje servisa (svih funkcija koje su navedene u IMoviesServices i implementirane u MovieServices) za kontrolu korisnika

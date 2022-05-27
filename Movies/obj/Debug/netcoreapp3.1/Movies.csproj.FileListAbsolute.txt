@@ -98,12 +98,7 @@ C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\scopedcss\bundle\Movies.
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Movies.TagHelpers.input.cache
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Movies.TagHelpers.output.cache
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Movies.RazorCoreGenerate.cache
-C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
-C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Movies.RazorTargetAssemblyInfo.cache
@@ -189,3 +184,11 @@ C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Admin\insert
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Movies.cshtml.g.cs
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Movies.cshtml.g.cs
 C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Movie\MovieDetails.cshtml.g.cs
+C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
+C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\User\Login.cshtml.g.cs
+C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\User\Register.cshtml.g.cs
+C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\User\Profile.cshtml.g.cs
+C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Users.cshtml.g.cs
+C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Admin\insertUser.cshtml.g.cs
+C:\CSharpProjekti\Movies\Movies\obj\Debug\netcoreapp3.1\Razor\Views\Admin\adminPanel.cshtml.g.cs
