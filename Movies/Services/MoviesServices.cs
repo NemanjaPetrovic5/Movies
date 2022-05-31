@@ -34,11 +34,14 @@ namespace Movies.Services
             return m.ToList();
         }
         // GET MOVIES
-        public (List<Movie>, int) GetMovies(int page, int pageSize)
+        public (List<Movie>, int) GetMovies(string search, int page, int pageSize)
         {
             var builder = Builders<Movie>.Filter;
 
             var filter = builder.Empty;
+
+            if (search != null)
+                filter &= builder.Regex("name", new BsonRegularExpression($"/{search}/i"));
 
             int skip = pageSize * (page - 1);
             var count = movies.CountDocuments(filter);

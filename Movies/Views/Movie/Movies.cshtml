@@ -11,6 +11,14 @@
 }
 <div class="movies-wrap">
     <div class="movies-list-wrap">
+        <div class="movies-filter crs">
+            <form method="get" asp-controller="Movie" asp-action="Movies" class="search-form">
+
+                <input class="search" name="search" type="text" placeholder="Name..." value="@ViewBag.search">
+
+                <button>Search</button>
+            </form>
+        </div>
         <div class="movies-list crs">
             <h2>Movies <span class="totalMovies">(@ViewBag.total)</span></h2>
             <div class="movies-grid">
@@ -24,7 +32,6 @@
                         </div>
                         <div class="movie-desc">
                             <h3 class="movie-title">@item.movie.name </h3>
-                            <p class="movie-about">@item.movie.content</p>
                         </div>
                         <a asp-controller="Movie" asp-action="MovieDetails" asp-route-id="@item.movie.movieID"></a>
                     </div>}

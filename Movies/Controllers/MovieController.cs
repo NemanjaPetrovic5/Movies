@@ -28,20 +28,21 @@ namespace Movies.Controllers
         }
 
         //[HttpGet("/movies/{naziv?}")]
-        public IActionResult Movies(int? page)
+        public IActionResult Movies(string search, int? page)
         {
-       
+            ViewBag.search = search;
+
             List<Movie> listMovies;
 
             if (page == null)
             {
                 page = 1;
             }
-            int pageSize = 9;
+            int pageSize = 12;
             ViewBag.page = page;
 
             int countMovie;
-            (listMovies, countMovie) = _MovieServices.GetMovies((int)page, pageSize);
+            (listMovies, countMovie) = _MovieServices.GetMovies(search, (int)page, pageSize);
 
 
             double maxPages = (double)countMovie / pageSize;
@@ -51,12 +52,6 @@ namespace Movies.Controllers
             var movies = new List<MoviesViewModel>();
             foreach (var item in listMovies)
             {
-                // skracivanje opisa kursa
-                if (item.content.Length > 50)
-                    item.content = item.content.Substring(0, 50) + "...";
-                if (item.name.Length > 46)
-                    item.name = item.name.Substring(0, 44) + "...";
-
                 movies.Add(new MoviesViewModel()
                 {
                     movie = item
