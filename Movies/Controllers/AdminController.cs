@@ -117,24 +117,43 @@ namespace Movies.Controllers
         }
 
         // GET: AdminController/Edit/5
-        public ActionResult Edit(int id)
+        [HttpGet]
+        public ActionResult<Movie> EditMovie(string id, Movie movie)
         {
-            return View();
+            var m = movie;
+
+            m = _MoviesServices.Find(id);
+
+            var viewmodel = new MoviesViewModel
+            {
+                movie = m,
+
+            };
+
+            return View(viewmodel);
         }
 
         // POST: AdminController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public IActionResult setEditMovie(Movie movie)
         {
-            try
+            var file = HttpContext.Request.Form.Files["image"];
+            if (file != null)
             {
-                return RedirectToAction(nameof(Index));
+                movie.image = movie.name + DateTime.Now.ToString("yyyyMMdd") + ".png";
+                var filePath = Directory.GetCurrentDirectory() + "/wwwroot/images/Movies";
+                if (!Directory.Exists(filePath))
+                {
+                    Directory.CreateDirectory(filePath);
+                }
+                var path = Path.Combine(filePath, movie.image);
+                FileStream fs = new FileStream(path, FileMode.Create);
+                file.CopyTo(fs);
+                fs.Close();
             }
-            catch
-            {
-                return View();
-            }
+            _MoviesServices.UpdateMovie(movie);
+            return RedirectToAction("Movies", movie);
         }
 
         // GET: AdminController/Delete/5

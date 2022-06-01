@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8N+Os2dTDlWwQ9xRqY9WaMsPFCFFjExqs3DUtWqtdDlLehxrT5T8k1cuKzZa0Nm1TX2Pl0L/l8I5yLHKx75ZcQ==",
+  "dgSpecHash": "vao9xOmcaykShjWQHTDFJAmj160mA+aNsH+QsGGAsQ1sC/DmfMSuVtzRGxjVq4d9aT90Bk/skVPB/mw9SsBUKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nemanja\\Desktop\\hjhj\\Movies\\Movies\\Movies.csproj",
+  "projectFilePath": "C:\\Users\\Nemanja\\Desktop\\New folder (4)\\Movies\\Movies\\Movies.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nemanja\\.nuget\\packages\\dnsclient\\1.6.0\\dnsclient.1.6.0.nupkg.sha512",
     "C:\\Users\\Nemanja\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.23\\microsoft.aspnetcore.cryptography.internal.3.1.23.nupkg.sha512",

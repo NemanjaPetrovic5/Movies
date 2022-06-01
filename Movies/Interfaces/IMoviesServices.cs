@@ -13,5 +13,7 @@ namespace Movies.Interfaces
         (List<Movie>, int) GetMovies(string search, int page, int pageSize);
 
         Movie Find(string id);
+
+        void UpdateMovie(Movie movie);
     }
 }

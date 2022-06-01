@@ -32,8 +32,7 @@
             <td>@item.movie.content</td>
 
             <td>
-                @Html.ActionLink("Edit", "Edit", new { @*id=item.movie.PrimaryKey*@}) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                <a class="edit-btn course" asp-controller="Admin" asp-action="editMovie" asp-route-id="@item.movie.movieID">Edit</a>|
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>

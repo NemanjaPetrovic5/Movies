@@ -53,6 +53,10 @@ namespace Movies.Services
         //FIND
         public Movie Find(string id) =>
           movies.Find(sub => sub.movieID == id).SingleOrDefault();
+
+        //UPDATE
+        public void UpdateMovie(Movie movie) =>
+                    movies.ReplaceOne(sub => sub.movieID == movie.movieID, movie);
     }
 }
 

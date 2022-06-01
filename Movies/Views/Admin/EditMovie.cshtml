@@ -1,0 +1,35 @@
+﻿@model Movies.ViewModels.Admin.MoviesViewModel
+
+@{
+    ViewData["Title"] = "EditMovie";
+}
+
+
+
+@section skripte{
+    <link rel="stylesheet" href="~/css/profile.css">
+}
+
+<!-- EDIT FORM movies -->
+<div class="profile edit-form movie">
+    <h1>Edit Movie</h1>
+
+    <i class="fas fa-times-circle closeBtn"></i>
+    <form asp-controller="Admin" asp-action="setEditMovie" method="post" enctype="multipart/form-data">
+
+        <input class="inp" type="hidden" asp-for="@Model.movie.movieID" />
+        <input class="inp" type="hidden" asp-for="@Model.movie.image" />
+
+        <label asp-for="name" class="control-label"></label>
+        <input class="inp" type="text" placeholder="Movie name" asp-for="@Model.movie.name" />
+
+        <label asp-for="content" class="control-label"></label>
+        <textarea class="inp textarea" rows="4" cols="50" asp-for="@Model.movie.content">
+        </textarea>
+
+        <label asp-for="image" class="control-label"></label>
+        <input type="file" placeholder="Movie image" name="image" class="img-upload inp">
+
+        <button class="signInBtn inp" type="submit">Submit</button>
+    </form>
+</div>
