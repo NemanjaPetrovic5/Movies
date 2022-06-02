@@ -43,5 +43,10 @@ namespace Movies.Services
             var k = users.Find(k => k.userID == id).SingleOrDefault();
             return k;
         }
+        //Delete User
+        public void DeleteUser(string id)
+        {
+            users.DeleteOne(sub => sub.userID == id);
+        }
     }
 }

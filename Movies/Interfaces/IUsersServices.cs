@@ -12,5 +12,7 @@ namespace Movies.Interfaces
         User Insert(User u);
         User Find(string username);
         User FindUserById(string id);
+        void DeleteUser(string id);
+
     }
 }

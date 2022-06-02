@@ -31,11 +31,9 @@
                 <td><input type="text" placeholder="User" value="User"></td>  }
             else {
                 <td><input type="text" placeholder="Admin" value="Admin"></td> }
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { @*id=item.movie.PrimaryKey*@}) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
+        <td>
+            <a class="delete-btn user" asp-controller="Admin" asp-action="DeleteUser" asp-route-id="@item.user.userID">Delete</a>
+        </td>
         </tr>
         }
     </tbody>

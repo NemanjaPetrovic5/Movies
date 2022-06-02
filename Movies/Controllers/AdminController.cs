@@ -238,5 +238,11 @@ namespace Movies.Controllers
                 return View();
             }
         }
+        //DELETE USER
+        public IActionResult DeleteUser(string id)
+        {
+            _UsersServices.DeleteUser(id);
+            return RedirectToAction("Users");
+        }
     }
 }
