@@ -15,5 +15,7 @@ namespace Movies.Interfaces
         Movie Find(string id);
 
         void UpdateMovie(Movie movie);
+
+        void DeleteMovie(string id);
     }
 }

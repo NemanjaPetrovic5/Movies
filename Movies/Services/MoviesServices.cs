@@ -57,6 +57,11 @@ namespace Movies.Services
         //UPDATE
         public void UpdateMovie(Movie movie) =>
                     movies.ReplaceOne(sub => sub.movieID == movie.movieID, movie);
+        //DELETE
+        public void DeleteMovie(string id)
+        {
+            movies.DeleteOne(sub => sub.movieID == id);
+        }
     }
 }
 

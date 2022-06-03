@@ -157,24 +157,11 @@ namespace Movies.Controllers
         }
 
         // GET: AdminController/Delete/5
-        public ActionResult Delete(int id)
+        [HttpGet]
+        public IActionResult DeleteMovie(string id)
         {
-            return View();
-        }
-
-        // POST: AdminController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            _MoviesServices.DeleteMovie(id);
+            return RedirectToAction("Movies");
         }
         public ActionResult Users()
         {
