@@ -2,21 +2,23 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+@section skripte{
+    <link rel="stylesheet" href="~/css/movies.css">
+}
 <section class="main">
-<div class="main-left">
-    <h1>Movies</h1>
+    <div class="main-left">
+        <h1>The Best Free <br> Movies</h1>
 
-    @if (User.Identity.IsAuthenticated)
-    {
-        <div class="btn-wrap">
-            <div class="btn"><a asp-controller="Movie" asp-action="Movies">Movies</a></div>
-        </div> }
-    else
-    {
-        <h2>Sign in to see the content we offer</h2>
-    }
-    <br />
-</div>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="btn-wrap">
+                <div class="btn"><a asp-controller="Movie" asp-action="Movies">Movies</a></div>
+            </div> }
+        else
+        {
+            <h2>Sign in to see the content we offer</h2>
+        }
+        <br />
+    </div>
 </section>
 

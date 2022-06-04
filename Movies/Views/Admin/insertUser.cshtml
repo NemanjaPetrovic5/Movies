@@ -3,44 +3,42 @@
 @{
     ViewData["Title"] = "insertUser";
 }
+@section skripte{
+    <link rel="stylesheet" href="~/css/admin.css">
+}
 
 <h1>Insert User</h1>
 
 <div class="row">
-    <div class="col-md-4">
+    <div class="admin-panel col-md-4">
         <form asp-action="insertUser">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
                 <label asp-for="username" class="control-label"></label>
-                <input asp-for="username" class="form-control" />
+                <input asp-for="username" class="form-control inp" />
                 <span asp-validation-for="username" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="email" class="control-label"></label>
-                <input asp-for="email" class="form-control" />
+                <input asp-for="email" class="form-control inp" />
                 <span asp-validation-for="email" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="password" class="control-label"></label><br />
-                @Html.PasswordFor(m => m.password)
+                @Html.PasswordFor(m => m.password, new { @class = "form-control inp" })
                 <span asp-validation-for="password" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="type" class="control-label"></label>
-                <input asp-for="type" class="form-control" />
-                <span asp-validation-for="type" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Insert User" class="btn btn-primary" />
+                <input type="submit" value="Insert User" class="signInBtn inp" />
             </div>
         </form>
+        <div>
+            <a asp-action="Users">Back to List</a>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Users">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

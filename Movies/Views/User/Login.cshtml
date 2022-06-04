@@ -2,7 +2,9 @@
 @{
     ViewData["Title"] = "Login";
 }
-
+@section skripte{
+    <link rel="stylesheet" href="~/css/login.css">
+}
 <div class="reg-wrap">
     <div class="login-wrap">
         <div class="login">
@@ -10,13 +12,13 @@
             <div asp-validation-summary="ModelOnly" class="error"></div>
             <form asp-controller="User" asp-action="Login" method="post">
                 <label>Username</label>
-                <input asp-for="username" />
-                <span asp-validation-for="username"></span>
+                <input class="inp" asp-for="username" />
+                <span asp-validation-for="username"></span><br />
                 <label>Password</label>
-                <input asp-for="password" />
-                <span asp-validation-for="password"></span>
+                <input class="inp" asp-for="password" />
+                <span asp-validation-for="password"></span><br />
                 <label><input asp-for="remember"> Remember me</label>
-                <input class="signInBtn" type="submit" value="Sign In" />
+                <input class="signInBtn inp" type="submit" value="Sign In" />
             </form>
             <a asp-controller="User" asp-action="Register">Don't have an account?</a>
         </div>

@@ -4,6 +4,16 @@
     font-family: sans-serif;
 }
 
+body, html {
+    color: #fff;
+    /*background-image: url(/images/Site/background.jpg) !important;*/
+    background-position: top !important;
+    background-repeat: no-repeat;
+    background-size: 100% cover;
+    background-color: #020d18;
+    width: 100%;
+}
+
 .movie-title {
     font-size: 1.3em;
     color: #fff;
@@ -24,14 +34,14 @@
     text-align: left;
 }
 
-    .movies-wrap .crs {
+    .movies-wrap .mv {
         position: relative;
         border-radius: 10px;
         box-sizing: border-box;
         padding: 40px 20px;
     }
 
-        .movies-wrap .crs h2 {
+        .movies-wrap .mv h2 {
             display: block;
             text-align: center;
             font-size: 18px;
@@ -52,7 +62,7 @@
     .movies-grid .movie {
         position: relative;
         height: 350px;
-        background: #1a1a1f;
+        background: #1A1B1F;
         border-radius: 10px;
         overflow: hidden;
     }
@@ -60,7 +70,7 @@
 .movie .movie-thumb {
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -126,7 +136,70 @@
     color: #c3c3c3;
     font-size: 16px;
 }
+
 .movie-img {
     width: 80px;
     height: 110px;
+}
+
+.inp {
+    width: 100%;
+    background-color: #222028;
+    border: 2px solid transparent;
+    height: 46px;
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.movies-filter .search-form {
+    width: 100%;
+}
+
+    .movies-filter .search-form input {
+        text-indent: 1em;
+    }
+
+    .movies-filter .search-form input, select {
+        display: inline;
+        width: 80%;
+        box-sizing: border-box;
+        height: 50px;
+        text-indent: 10px;
+        border: none;
+        margin-bottom: 14px;
+        background: #30303d;
+        border-radius: 5px;
+        color: #dbdbdb;
+        outline-color: #1ea0ff;
+    }
+
+        .movies-filter .search-form input:focus,
+        .movies-filter .search-form select:focus {
+            outline: none;
+        }
+
+    .movies-filter .search-form button {
+        width: 19%;
+        height: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #e4e4e4;
+        color: #24242B;
+        border: none;
+        transition: 0.5s ease all;
+    }
+
+        .movies-filter .search-form button:hover {
+            background: #1ea0ff;
+            color: #fff;
+        }
+
+.table {
+    color: #fff;
 }

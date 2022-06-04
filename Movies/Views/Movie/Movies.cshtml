@@ -11,7 +11,7 @@
 }
 <div class="movies-wrap">
     <div class="movies-list-wrap">
-        <div class="movies-filter crs">
+        <div class="movies-filter mv">
             <form method="get" asp-controller="Movie" asp-action="Movies" class="search-form">
 
                 <input class="search" name="search" type="text" placeholder="Name..." value="@ViewBag.search">
@@ -19,7 +19,7 @@
                 <button>Search</button>
             </form>
         </div>
-        <div class="movies-list crs">
+        <div class="movies-list mv">
             <h2>Movies <span class="totalMovies">(@ViewBag.total)</span></h2>
             <div class="movies-grid">
                 @foreach (var item in Model.movie)

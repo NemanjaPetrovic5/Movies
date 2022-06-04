@@ -48,7 +48,7 @@ namespace Movies.Controllers
 
             foreach (var item in MovieList)
             {
-                // skracivanje opisa kursa
+                // skracivanje opisa
                 if (item.content.Length > 50)
                     item.content = item.content.Substring(0, 50) + "...";
 
@@ -216,7 +216,7 @@ namespace Movies.Controllers
 
                     };
                     _UsersServices.Insert(user);
-                    return RedirectToAction("insertUser");
+                    return RedirectToAction("Users");
                 };
                 return RedirectToAction("Index");
             }

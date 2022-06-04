@@ -2,7 +2,9 @@
 @{
     ViewData["Title"] = "Register";
 }
-
+@section skripte{
+    <link rel="stylesheet" href="~/css/login.css">
+}
 
 <div class="reg-wrap">
     <div class="login-wrap">
@@ -11,22 +13,22 @@
             <div asp-validation-summary="ModelOnly" class="error"></div>
             <form asp-controller="User" asp-action="Register" method="post">
                 <label asp-for="username"></label>
-                <input asp-for="username" />
-                <span asp-validation-for="username"></span>
+                <input class="inp" asp-for="username" />
+                <span asp-validation-for="username"></span><br />
 
                 <label asp-for="email"></label>
-                <input asp-for="email" />
-                <span asp-validation-for="email"></span>
+                <input class="inp" asp-for="email" />
+                <span asp-validation-for="email"></span><br />
 
                 <label asp-for="password"></label>
-                <input asp-for="password" />
-                <span asp-validation-for="password"></span>
+                <input class="inp" asp-for="password" />
+                <span asp-validation-for="password"></span><br />
 
                 <label asp-for="confirmPassword"></label>
-                <input asp-for="confirmPassword" />
-                <span asp-validation-for="confirmPassword"></span>
+                <input class="inp" asp-for="confirmPassword" />
+                <span asp-validation-for="confirmPassword"></span><br />
 
-                <input class="signInBtn" type="submit" value="Sign Up" />
+                <input class="signInBtn inp" type="submit" value="Sign Up" />
             </form>
             <a asp-controller="User" asp-action="Login">Already have an account?</a>
         </div>
